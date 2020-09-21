@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sc-Fy : Your playlists</title>
+    <link rel="stylesheet" href="./css/home_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="logo">ScDev</a></li>
+          <li><a href="./Home.html"><i class="fas fa-home"></i>Home</a></li>
+          <li><i class="fas fa-search"></i> Search</li>
+          <li><i class="fas fa-grip-lines-vertical"></i> Your Library</li>
+          <li>
+            Playlists
+            <br> <br>
+            <ul class="playlist">
+              <li><i class="fas fa-plus-square"></i> Create Playlist</li>
+              <li><a href="./liked_songs.html"><i class="fas fa-heart"></i> Liked Songs</a></li>
+            </ul>
+          </li>
+          <hr>
+          <li>Sleepy Piano</li>
+          <li>Install App</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    </div>
+      <!-- <script src="./js/app.js"></script> -->
+   <script>
+
+const imgs = [
+    'http://api.adorable.io/avatars/32131231',
+    'http://api.adorable.io/avatars/32131232',
+    'http://api.adorable.io/avatars/32131233',
+    'http://api.adorable.io/avatars/32131234',
+    'http://api.adorable.io/avatars/32131235',
+    'http://api.adorable.io/avatars/32131236',
+    'http://api.adorable.io/avatars/32131237',
+    'http://api.adorable.io/avatars/32131238',
+    'http://api.adorable.io/avatars/32131239',
+    'http://api.adorable.io/avatars/32131230',
+    'http://api.adorable.io/avatars/32131241',
+    'http://api.adorable.io/avatars/32131242',
+    'http://api.adorable.io/avatars/32131230',
+    'http://api.adorable.io/avatars/32131241',
+    'http://api.adorable.io/avatars/32131242',
+    'http://api.adorable.io/avatars/32131230',
+    'http://api.adorable.io/avatars/32131241',
+    'http://api.adorable.io/avatars/32131242',
+    'http://api.adorable.io/avatars/32131243',
+    'http://api.adorable.io/avatars/32131244'
+]
+const container = document.querySelector('.container');
+for(let i = 0; i<=50; i++){
+    setTimeout(createElement(),1000);
+}
+
+function createElement(){
+  let randomInteger = Math.floor(Math.random()*imgs.length);
+  let div = document.createElement('div');
+  div.style.backgroundImage=`url(${imgs[randomInteger]})`;
+  let i = document.createElement('i');
+    i.classList.add('far');
+    i.classList.add('fa-play-circle');
+  div.appendChild(i);
+  
+  container.appendChild(div); 
+}
+   </script>
+</body>
+</html>
