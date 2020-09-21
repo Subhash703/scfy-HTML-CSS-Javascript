@@ -18,7 +18,7 @@
             Playlists
             <br> <br>
             <ul class="playlist">
-              <li><i class="fas fa-plus-square"></i> Create Playlist</li>
+              <li id="create-playlist"><i class="fas fa-plus-square"></i> Create Playlist</li>
               <li><a href="./liked_songs.html"><i class="fas fa-heart"></i> Liked Songs</a></li>
             </ul>
           </li>
@@ -275,10 +275,35 @@
       -->
       </section>
       <footer>
-        
+        <h3>Copy rights :&copy; Subhash Chandra</h3>
       </footer>
 
   </div>
+  <div class="create-playlist-card">
+    <div class="make_playlist">
+      <div class="cross">+</div>
+      <h1>Make a new Plaulist</h1>
+      <form action="#">
+        <input type="text" placeholder="Playlist Name">
+        <input type="text" placeholder="Description">
+
+        <a href="" class="btn btn-submit" id="add-playlist">Add</a>
+      </form>
+    </div>
+  </div>
   <!-- <script src="/js/app.js"></script> -->
+  <script>
+    const make_playlist = document.querySelector('#create-playlist');
+    const createPlayListCard = document.querySelector('.create-playlist-card');
+    const cross = document.querySelector('.cross');
+    
+    make_playlist.addEventListener('click',()=>{
+      createPlayListCard.style.display="flex";
+    });
+
+    cross.addEventListener('click',()=>{
+      createPlayListCard.style.display="none";
+    });
+  </script>
 </body>
 </html>

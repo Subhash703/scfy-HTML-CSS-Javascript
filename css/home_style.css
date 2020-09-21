@@ -7,7 +7,11 @@
   a{
       color: inherit;
   }
+  .content{
+    margin-left: 14rem;
+}
 /* Nav */
+
 nav{
     display:flex;
     height:100vh;
@@ -54,7 +58,6 @@ nav{
   .container{
     padding:1rem 0.5rem;
     width:auto;
-    margin-left: 15rem;
     background-color:#FFF;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(350px,auto));

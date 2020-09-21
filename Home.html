@@ -27,8 +27,9 @@
           <li>Install App</li>
         </ul>
     </nav>
-
-    <div class="container">
+    <div class="content">
+        <div class="container">
+        </div>
     </div>
       <!-- <script src="./js/app.js"></script> -->
    <script>
@@ -64,9 +65,7 @@ function createElement(){
   let randomInteger = Math.floor(Math.random()*imgs.length);
   let div = document.createElement('div');
   div.style.backgroundImage=`url(${imgs[randomInteger]})`;
-  let i = document.createElement('i');
-    i.classList.add('far');
-    i.classList.add('fa-play-circle');
+    
   div.appendChild(i);
   
   container.appendChild(div); 
