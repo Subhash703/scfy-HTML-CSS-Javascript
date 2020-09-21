@@ -19,7 +19,7 @@
   nav{
     display:flex;
     height:100vh;
-    width: 200px;
+    flex: 2;
     background-color:#010101;
     position:fixed;
     padding:1rem 2rem;
@@ -40,7 +40,7 @@
   ul li{
     margin-bottom:1rem;
     color:rgba(255,255,255, 0.5);
-    cursor:pointer;
+    /* cursor:pointer; */
   }
   nav ul li i{
     margin-right:0.7rem;
@@ -100,6 +100,7 @@
     max-height: 100vh;
     overflow-y: auto;
   }
+
   .playlist__items{
     display:flex;
     flex-direction:column;
@@ -110,6 +111,13 @@
     padding:0.4rem 1rem;
     transition:0.3s all ease-in;
   }
+
+  .playlist__items .song{
+    display:flex;
+    align-items:center;
+    font-size:1.2rem;
+  }
+
   .playlist__items .song:hover{
     background-color:rgba(255,255,255,.5);
   }
@@ -124,14 +132,18 @@
     border:2px solid rgba(255,255,255,0.5);
   }
   
-  .playlist__items .song{
-    display:flex;
-    align-items:center;
-  }
+  
   .song__details{
     margin-left:1rem;
   }
-  
+  .song:nth-child(1)>:nth-child(2){
+      margin-left: 2rem;
+  }
+  .song>:nth-child(3){
+      margin-left: auto;
+      margin-right: 1rem;
+      cursor: pointer;
+  }
   
   
   
