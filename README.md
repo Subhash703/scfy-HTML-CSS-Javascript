@@ -1,5 +1,5 @@
 # scfy-HTML-CSS-Javascript
-
+# App is still in progress
 This project is a bit of spotify-clone using simple HTML , CSS & JavaScript.
 
 #Layout Pictures
