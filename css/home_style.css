@@ -4,23 +4,42 @@
     box-sizing:border-box;
     text-decoration: none;
   }
-  a{
-      color: inherit;
-  }
-  .content{
-    margin-left: 14rem;
+  
+a{
+  color: inherit;
 }
-/* Nav */
+.content{
+  flex: 1;
+}
 
-nav{
-    display:flex;
-    height:100vh;
-    flex: 2;
-    background-color:#010101;
-    position:fixed;
-    padding:1rem 2rem;
-  }
-  nav hr{
+
+body{
+  background-color: #f3f5f9;
+}
+
+.wrapper{
+ display: flex;
+ position: relative;
+}
+.sidebar-wrapper{
+   min-width: 320px;
+   height: 100%;
+   position: relative;
+}
+.wrapper .sidebar{
+  width: 320px;
+  height: 100%;
+  background: #010101;
+  padding: 30px 0px;
+  position:fixed;
+  left: 0;
+}
+.sidebar .logo{
+  font-size: 2.1em;
+  width: 100%;
+  text-align: center;
+}
+nav hr{
     height:3px;
     width:140%;
     transform:translateX(-15%);
@@ -28,83 +47,87 @@ nav{
     margin-bottom:1rem;
     border:none;
   }
-  ul{
-    list-style:none;
-    display:flex;
-    flex-direction:column;
-  }
-  ul li{
-    margin-bottom:1rem;
-    color:rgba(255,255,255, 0.5);
-    /* cursor:pointer; */
-  }
-  nav ul li i{
-    margin-right:0.7rem;
-  }
-  .nav-links li:last-of-type{
-    margin-top:auto;
-  }
-  .logo{
-    font-size:1.4em;
-    text-decoration:none;
-    color:#fff;
-    letter-spacing:1.5px;
-  }
-  .playlist{
-    padding-left:14px;
-  }
-
-  /* Content */
-  .container{
-    padding:1rem 0.5rem;
-    width:auto;
-    background-color:#FFF;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,auto));
-    grid-gap:1rem;
-  }
-  .container>div{
-    height:300px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center;
-    border:3px solid rgba(0,0,0,0.4);
-    transition:all 0.5s ease;
-    opacity: .75;
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-    transition:all 0.2s ease;
-    border-radius:1rem;
-
-  }
-  .container>div:hover{
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    color:white;
-  }
+.sidebar>ul{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  margin:1rem 2.5rem;
+}
+.sidebar ul li{
+  margin-bottom:1rem;
+  color:rgba(255,255,255, 0.5);
+  /* cursor:pointer; */
+}
+.sidebar ul li i{
+  margin-right:0.7rem;
+}
+.nav-links li:last-of-type{
+  margin-top:auto;
+}
+.logo{
+  font-size:1.4em;
+  text-decoration:none;
+  color:#fff;
+  letter-spacing:1.5px;
+}
+.playlist{
+  list-style: none;
+  margin-left: 0.6rem;
+}
+/* Content */
+.container{
+  padding:1rem 0.5rem;
+  width:auto;
+  background-color:#FFF;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,auto));
+  grid-gap:1rem;
+}
+.container>div{
+  height:240px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   
-  .header{
-    padding:0 1rem;
-    min-height:10vh;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
-    border-bottom:3px solid rgba(25,55,55,0.2);
-    position:sticky;
-    top:0;
-    background:#fff;
-    z-index:10;
-  }
-  .header h1{
-  /*   letter-spacing:1.5px; */
-    color:rgba(25,55,55,0.5);
-  }
-  h1 span{
-    font-size:1.5em;
-    color:#f3c392;
-  }
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  border:3px solid rgba(0,0,0,0.4);
+  transition:all 0.5s ease;
+  opacity: .75;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  transition:all 0.2s ease;
+  border-radius:1rem;
+
+}
+.container>div:hover{
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color:white;
+}
+.container .fa-play-circle{
+  font-size: 64px;
+  cursor: pointer;
+}
+.header{
+  padding:0 1rem;
+  min-height:10vh;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  border-bottom:3px solid rgba(25,55,55,0.2);
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:10;
+}
+.header h1{
+/*   letter-spacing:1.5px; */
+  color:rgba(25,55,55,0.5);
+}
+h1 span{
+  font-size:1.5em;
+  color:#f3c392;
+}

@@ -10,17 +10,26 @@
     }
   body{
     min-height:100vh;
-    /* display: flex; */
   }
-  nav{
-      flex: 1;
+  .sidenav{
+    height: 100% !important;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
   }
-  .content{
-      margin-left: 12rem;
+  .social{
+    display: flex;
+    flex-direction: row;
   }
   nav{
     display:flex;
-    height:100vh;
+    height:100%;
     flex: 2;
     background-color:#010101;
     position:fixed;
@@ -230,7 +239,7 @@
       text-align:center;
   }
   .btn-submit{
-      background:rgba(219, 31, 157, 0.4);
+      background:rgb(56, 216, 56);
       color:#111318;
       text-transform: uppercase;
       margin: 15px auto;
