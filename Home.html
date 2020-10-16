@@ -1,88 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sc-Fy : Your playlists</title>
-    <link rel="stylesheet" href="./css/home_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-</head>
-<body>
-  <div class="wrapper">
-    <div class="sidebar-wrapper">
-      <nav class="sidebar">
-        <div class="logo">
-          <a href="./Home.html">ScDev</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="./Home.html"><i class="fas fa-home"></i>Home</a></li>
-          <li><i class="fas fa-search"></i> Search</li>
-          <li><i class="fas fa-grip-lines-vertical"></i> Your Library</li>
-          <li>
-            Playlists
-            <br> <br>
-            <ul class="playlist">
-              <li><i class="fas fa-plus-square"></i> Create Playlist</li>
-              <li><a href="./liked_songs.html"><i class="fas fa-heart"></i> Liked Songs</a></li>
-            </ul>
-          </li>
-          <hr>
-          <li>Sleepy Piano</li>
-          <li>Install App</li>
-        </ul>
-      </nav>
-    </div>
-    
-    <div class="content">
-      <h1 style="padding: 1rem 3rem;">Shourtcuts</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sc-Fy : Your playlists</title>
+		<link rel="stylesheet" href="./css/home_style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- Sidebar -->
+			<div class="sidebar-wrapper">
+				<nav class="sidebar">
+					<div class="logo">
+						<a href="./Home.html">ScDev</a>
+					</div>
+					<ul class="nav-links">
+						<li>
+							<a href="./Home.html"><i class="fas fa-home"></i>Home</a>
+						</li>
+						<li><i class="fas fa-search"></i> Search</li>
+						<li><i class="fas fa-grip-lines-vertical"></i> Your Library</li>
+						<li>
+							Playlists
+							<br />
+							<br />
+							<ul class="playlist">
+								<li id="create-playlist">
+									<i class="fas fa-plus-square"></i> Create Playlist
+								</li>
+								<li>
+									<a href="./liked_songs.html"
+										><i class="fas fa-heart"></i> Liked Songs</a
+									>
+								</li>
+							</ul>
+						</li>
+						<hr />
+						<li>Sleepy Piano</li>
+						<li>Install App</li>
+					</ul>
+				</nav>
+			</div>
 
-      <div class="container">
-      </div>
-    </div>
-  </div>
-    
-      <!-- <script src="./js/app.js"></script> -->
-   <script>
+			<!-- Main content -->
 
-const imgs = [
-    'https://source.unsplash.com/1600x900/?dark',
-    'https://source.unsplash.com/1600x900/?beauty',
-    'https://source.unsplash.com/1600x900/?life',
-    'https://source.unsplash.com/1600x900/?forest',
-    'https://source.unsplash.com/1600x900/?song',
-    'https://source.unsplash.com/1600x900/?hollywood',
-    'https://source.unsplash.com/1600x900/?music',
-    'https://source.unsplash.com/1600x900/?singer',
-    'https://source.unsplash.com/1600x900/?sad',
-    'https://source.unsplash.com/1600x900/?lonely',
-    'https://source.unsplash.com/1600x900/?nature',
-    'https://source.unsplash.com/1600x900/?family',
-    'https://source.unsplash.com/1600x900/?dark',
-    'https://source.unsplash.com/1600x900/?dark',
-    'https://source.unsplash.com/1600x900/?life',
-    'https://source.unsplash.com/1600x900/?forest',
-    'https://source.unsplash.com/1600x900/?song',
-    'https://source.unsplash.com/1600x900/?joker',
-    'https://source.unsplash.com/1600x900/?Marshmello',
-    'https://source.unsplash.com/1600x900/?singer',
-    'https://source.unsplash.com/1600x900/?sad'
-]
-const container = document.querySelector('.container');
-for(let i = 0; i<=30; i++){
-    setTimeout(createElement(),1000);
-}
+			<div class="content">
+				<!-- Shortcuts -->
+				<div class="top_content-nav">
+					<ul>
+						<li><i class="fas fa-chevron-left"></i></li>
+						<li><i class="fas fa-chevron-right"></i></li>
+						<li>Loved My App ? <i class="fas fa-heart"></i></li>
+						<li><div class="git-btn">Subhash Chandra</div></li>
+					</ul>
+				</div>
+				<div class="sc_music-heading" style="margin-left: 1rem">
+					<h1>Shortcuts</h1>
+					<span class="sc__expand-mlist"><a href="">SEE ALL</a></span>
+				</div>
+				<div class="container">
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?life"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Sleepy Piano </span>
+							<div class="artist_name">Calm music for sleeping</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?songs"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Covers, Vol.2 </span>
+							<div class="artist_name">Sleeping At Last</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?EdShereen"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Alone Again </span>
+							<div class="artist_name">
+								When everything is lonely, I can be my best friend
+							</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?Marshmello"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Mood Booster </span>
+							<div class="artist_name">Get happy witg today's dose</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?family"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Dark & Stormy </span>
+							<div class="artist_name">Beautiful dark, dramatic tracks.</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?sad"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Comfort Zone </span>
+							<div class="artist_name">
+								Chilled songs taht you are familiar with.
+							</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?music"
+								,alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Slow songs &hearts; </span>
+							<div class="artist_name">Calm music for sleeping</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?family"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Sleepy Piano </span>
+							<div class="artist_name">Calm music for sleeping</div>
+						</div>
+					</div>
+				</div>
 
-function createElement(){
-  let randomInteger = Math.floor(Math.random()*imgs.length);
-  let div = document.createElement('div');
-  div.style.backgroundImage=`url(${imgs[randomInteger]})`;
-  let i = document.createElement('i');
-    i.classList.add('far');
-    i.classList.add('fa-play-circle');
-  div.appendChild(i);
-  
-  container.appendChild(div); 
-}
-   </script>
-</body>
+				<!--  -->
+				<div class="sc_music-heading" style="margin-left: 1rem">
+					<h1>Recently played</h1>
+					<span class="sc__expand-mlist"><a href="">SEE ALL</a></span>
+				</div>
+
+				<div class="container">
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?life"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Sleepy Piano </span>
+							<div class="artist_name">Calm music for sleeping</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?songs"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Covers, Vol.2 </span>
+							<div class="artist_name">Sleeping At Last</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?EdShereen"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Alone Again </span>
+							<div class="artist_name">
+								When everything is lonely, I can be my best friend
+							</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?Marshmello"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Mood Booster </span>
+							<div class="artist_name">Get happy witg today's dose</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?family"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Dark & Stormy </span>
+							<div class="artist_name">Beautiful dark, dramatic tracks.</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?sad"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Comfort Zone </span>
+							<div class="artist_name">
+								Chilled songs taht you are familiar with.
+							</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?music"
+								,alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Slow songs &hearts; </span>
+							<div class="artist_name">Calm music for sleeping</div>
+						</div>
+					</div>
+					<div class="sc__song-wrapper">
+						<div class="sc_song-img">
+							<img
+								class="sc_cover-image"
+								src="https://source.unsplash.com/1600x900/?family"
+								alt=""
+							/>
+						</div>
+						<div class="sc_song-detail">
+							<span class="name"> Sleepy Piano </span>
+							<div class="artist_name">Calm music for sleeping</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="music-list">
+					<ul>
+						<li class="music">
+							<i class="fas fa-pause" title="Play"></i> Why does it always ran
+							on me <small>xxxx</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> No Air
+							<small>Luc</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Thunder- Acoustic
+							<small>The Freed</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Make you Feel My Love
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> If I can't have you
+							<small>Emmle Reins</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Lot to learn
+							<small>Vivid Color</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Lover
+							<small>It Aint Me Babe</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Intentions
+							<small>Halloran & Kate</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Pure Shores
+							<small>Colder Shoulders</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Everything I wanted
+							<small>The Mayries</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> My Girl
+							<small>Byoce Avenue</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Here with me
+							<small>Marshmello</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Impossible
+							<small>James Arthur</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Never Tear Us apart
+							<small>Sleeping At last</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Let her go
+							<small>Jasmine Thompson</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Love Story
+							<small>Tylor Swift</small>
+						</li>
+						<li class="music">
+							<i class="fas fa-guitar" title="Play"></i> Someone you Loved
+							<small>Lewis Capaldi</small>
+						</li>
+					</ul>
+				</div>
+				<div class="music_player-wrapper">
+					<div class="current-track">
+						<div class="image-cover">
+							<img src="https://source.unsplash.com/1600x900/?dark" alt="" />
+						</div>
+						<p class="song-name">Someone You Loved</p>
+						<i class="fas fa-heart"></i>
+					</div>
+					<div class="music-player">
+						<div class="music-controls d-center">
+							<i class="fas fa-random"></i>
+							<i class="fas fa-step-backward"></i>
+							<i class="fas fa-pause-circle pause"></i>
+							<i class="fas fa-step-forward"></i>
+							<i class="fas fa-redo"></i>
+						</div>
+						<div class="music-progress">
+							<div class="progress"></div>
+						</div>
+					</div>
+					<div class="icons-right">
+						<i class="fas fa-volume-up"></i>
+						<i class="fas fa-list"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="create-playlist-card">
+			<div class="make_playlist">
+				<div class="cross">+</div>
+				<h1>Make a new Plaulist</h1>
+				<form action="#">
+					<input type="text" placeholder="Playlist Name" />
+					<input type="text" placeholder="Description" />
+
+					<a href="" class="btn btn-submit" id="add-playlist">Add</a>
+				</form>
+			</div>
+		</div>
+		<!-- <script src="./js/app.js"></script> -->
+		<script>
+			const imgs = [
+				"https://source.unsplash.com/1600x900/?dark",
+				"https://source.unsplash.com/1600x900/?beauty",
+				"https://source.unsplash.com/1600x900/?life",
+				"https://source.unsplash.com/1600x900/?forest",
+				"https://source.unsplash.com/1600x900/?song",
+				"https://source.unsplash.com/1600x900/?hollywood",
+				"https://source.unsplash.com/1600x900/?music",
+				"https://source.unsplash.com/1600x900/?singer",
+				"https://source.unsplash.com/1600x900/?sad",
+				"https://source.unsplash.com/1600x900/?lonely",
+				"https://source.unsplash.com/1600x900/?nature",
+				"https://source.unsplash.com/1600x900/?family",
+				"https://source.unsplash.com/1600x900/?dark",
+				"https://source.unsplash.com/1600x900/?dark",
+				"https://source.unsplash.com/1600x900/?life",
+				"https://source.unsplash.com/1600x900/?forest",
+				"https://source.unsplash.com/1600x900/?song",
+				"https://source.unsplash.com/1600x900/?joker",
+				"https://source.unsplash.com/1600x900/?Marshmello",
+				"https://source.unsplash.com/1600x900/?singer",
+				"https://source.unsplash.com/1600x900/?sad",
+			];
+			const container = document.querySelector(".container");
+			for (let i = 0; i < 0; i++) {
+				setTimeout(createElement(), 1000);
+			}
+
+			function createElement() {
+				let randomInteger = Math.floor(Math.random() * imgs.length);
+				let div = document.createElement("div");
+				div.style.backgroundImage = `url(${imgs[randomInteger]})`;
+				let i = document.createElement("i");
+				i.classList.add("far");
+				i.classList.add("fa-play-circle");
+				div.appendChild(i);
+
+				container.appendChild(div);
+			}
+		</script>
+		<script>
+			const make_playlist = document.querySelector("#create-playlist");
+			const createPlayListCard = document.querySelector(
+				".create-playlist-card",
+			);
+			const cross = document.querySelector(".cross");
+
+			make_playlist.addEventListener("click", () => {
+				createPlayListCard.style.display = "flex";
+			});
+
+			cross.addEventListener("click", () => {
+				createPlayListCard.style.display = "none";
+			});
+		</script>
+	</body>
 </html>
