@@ -34,11 +34,13 @@ body {
 	padding: 30px 0px;
 	position: fixed;
 	left: 0;
+	color: #fff;
 }
 .sidebar .logo {
 	font-size: 2.1em;
 	width: 100%;
-	text-align: center;
+	text-align: left;
+	margin: 16px 16px;
 }
 nav hr {
 	height: 3px;
@@ -48,21 +50,35 @@ nav hr {
 	margin-bottom: 1rem;
 	border: none;
 }
-.sidebar > ul {
+.sidebar .nav-links {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
-	margin: 1rem 2.5rem;
+	width: 100%;
 	height: 90%;
 }
-.sidebar ul li {
+.sidebar ul.playlist {
+	margin-left: 0;
+}
+.sidebar .nav-links > li {
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+	color: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+}
+.nav-links p {
+	margin: 1rem;
+}
+
+.sidebar .playlist > li {
 	margin-bottom: 1rem;
 	color: rgba(255, 255, 255, 0.5);
 	cursor: pointer;
 	transition: all 0.2s ease-in;
 }
 .sidebar ul li:hover {
-	color: #181818;
+	color: #796f6f;
 }
 .sidebar ul li i {
 	margin-right: 0.5rem;
@@ -267,6 +283,7 @@ form {
 	color: #fff;
 	text-align: center;
 	border-radius: 5px;
+	cursor: pointer;
 }
 
 /* Music Player */
@@ -377,4 +394,8 @@ form {
 	height: 10px;
 	width: 90%;
 	background: #fff;
+}
+
+.music_player-wrapper .song-name {
+	color: #fff;
 }

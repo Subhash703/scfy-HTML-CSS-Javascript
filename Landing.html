@@ -2,14 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Welcome : ScFy - Your Favorite Music Lists</title>
 		<link rel="stylesheet" href="./css/landing.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-		/></head
-	>1
+		/>
+	</head>
 	<body>
 		<div class="container-wrapper">
 			<div class="navbar">
@@ -23,12 +24,32 @@
 			</div>
 			<div class="sidebar">
 				<ul>
-					<li>Home</li>
-					<li>Contact</li>
-					<li>Services</li>
-					<li>About</li>
-					<li>Career</li>
-					<li>Follow</li>
+					<li>
+						<a href="./Home.html"><i class="fas fa-home"></i> Home</a>
+					</li>
+					<li>
+						<a href="./liked_songs.html"
+							><i class="fas fa-list"></i> Go to Playlists</a
+						>
+					</li>
+					<li>
+						<a href="."><i class="fas fa-address-card"></i> About Me</a>
+					</li>
+					<li>
+						<a href="https://github.com/Subhash703"
+							><i class="fab fa-github-square"></i> Github</a
+						>
+					</li>
+					<li>
+						<a href="https://www.instagram.com"
+							><i class="fab fa-instagram-square"></i> Instagram</a
+						>
+					</li>
+					<li>
+						<a href="https://www.twitter.com"
+							><i class="fab fa-twitter-square"></i> Twitter</a
+						>
+					</li>
 				</ul>
 			</div>
 			<div class="svg-top">
@@ -38,17 +59,12 @@
 				<div class="heading">
 					<h1>ScFy</h1>
 				</div>
-				<p>
-					🎵 Your lights in your heart, <br />
-					It shines on my day. <br />
-					My eyes on the soul.. <br />
-					Your heart comes to me.. Lines our ways <br />
-					Hold my hand 🎵
-				</p>
-				<div class="btn btn-home">Brows Music</div>
+				<p class="playlist-desc"></p>
+				<div class="btn btn-home"><a href="./Home.html">Brows Music</a></div>
 			</div>
 		</div>
 
+		<audio id="bg-audio" src="./sources/background.mp3" autoplay></audio>
 		<script>
 			const sidebar = document.querySelector(".sidebar");
 			// const humBtn = document.querySelector(".humburger");
@@ -59,6 +75,25 @@
 				barsIcon.classList.toggle("fa-bars");
 				barsIcon.classList.toggle("fa-times");
 			});
+
+			const bgAudio = document.getElementById("bg-audio");
+			bgAudio.volume = 0.2;
+
+			let text =
+				"🎵 Your lights in your heart, It shines on my day. My eyes on the soul... Your heart comes to me... Lines our ways...  Hold my hand 🎵";
+			const pdesc = document.querySelector(".playlist-desc");
+			let tLen = text.length;
+			console.log(pdesc.innerText);
+
+			let x = 0;
+			const id = setInterval(() => {
+				if (x < tLen) {
+					pdesc.innerHTML += `${text[x]}`;
+				} else {
+					clearInterval(id);
+				}
+				x++;
+			}, 350);
 		</script>
 	</body>
 </html>
