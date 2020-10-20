@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Welcome : ScFy - Your Favorite Music Lists</title>
+		<link rel="stylesheet" href="./css/landing.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+		/></head
+	>1
+	<body>
+		<div class="container-wrapper">
+			<div class="navbar">
+				<ul>
+					<li class="humburger">
+						<i class="fas fa-bars"></i>
+					</li>
+					<li><a href="">About Us</a></li>
+					<li class="btn"><a href="">Get started</a></li>
+				</ul>
+			</div>
+			<div class="sidebar">
+				<ul>
+					<li>Home</li>
+					<li>Contact</li>
+					<li>Services</li>
+					<li>About</li>
+					<li>Career</li>
+					<li>Follow</li>
+				</ul>
+			</div>
+			<div class="svg-top">
+				<img src="./sources/ellipsesvg.png" alt="" />
+			</div>
+			<div class="home_content">
+				<div class="heading">
+					<h1>ScFy</h1>
+				</div>
+				<p>
+					🎵 Your lights in your heart, <br />
+					It shines on my day. <br />
+					My eyes on the soul.. <br />
+					Your heart comes to me.. Lines our ways <br />
+					Hold my hand 🎵
+				</p>
+				<div class="btn btn-home">Brows Music</div>
+			</div>
+		</div>
+
+		<script>
+			const sidebar = document.querySelector(".sidebar");
+			// const humBtn = document.querySelector(".humburger");
+			const barsIcon = document.querySelector(".fa-bars");
+
+			barsIcon.addEventListener("click", () => {
+				sidebar.classList.toggle("open");
+				barsIcon.classList.toggle("fa-bars");
+				barsIcon.classList.toggle("fa-times");
+			});
+		</script>
+	</body>
+</html>
