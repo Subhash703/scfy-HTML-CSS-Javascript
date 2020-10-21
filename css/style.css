@@ -232,6 +232,9 @@ form {
 .music_list-item:hover {
 	background: rgba(255, 255, 255, 0.302);
 }
+.music_list-item .song_name small {
+	font-size: 10.5px;
+}
 
 .icon-wrap {
 	height: 35px;

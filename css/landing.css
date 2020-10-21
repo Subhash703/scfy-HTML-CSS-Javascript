@@ -190,3 +190,72 @@ a {
 	background: #035a77;
 }
 /*# sourceMappingURL=landing.css.map */
+
+/* Animations */
+.circles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 5%;
+	width: 84%;
+	height: 77vh;
+	overflow: hidden;
+}
+
+.circles li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 20px;
+	height: 20px;
+	background: rgba(255, 255, 255, 0.2);
+	animation: animate 15s linear infinite;
+	bottom: -150px;
+}
+.circles li:nth-child(4) {
+	left: 40%;
+	width: 60px;
+	height: 60px;
+	animation-delay: 0s;
+	animation-duration: 18s;
+}
+.circles li:nth-child(3) {
+	left: 45%;
+	width: 140px;
+	height: 140px;
+	animation-delay: 0s;
+	animation-duration: 18s;
+}
+.circles li:nth-child(2) {
+	left: 60%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 0s;
+	animation-duration: 20s;
+}
+.circles li:nth-child(1) {
+	left: 30%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 1s;
+	animation-duration: 15s;
+}
+.circles li:nth-child(5) {
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 1s;
+	animation-duration: 20s;
+}
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+		border-radius: 0;
+	}
+	100% {
+		transform: translateY(-1000px) rotate(720deg);
+		opacity: 0;
+		border-radius: 50%;
+	}
+}
