@@ -14,30 +14,56 @@
     <div class="sidebar-wrapper">
       <nav class="sidebar">
         <div class="logo">
-          <a href="./index.html">ScDev</a>
+          <a href="./index.html">ScFy</a>
         </div>
         <ul class="nav-links">
-          <li><a href="./Home.html"><i class="fas fa-home"></i>Home</a></li>
+          <li>
+            <a href="./Home.html"><i class="fas fa-home"></i>Home</a>
+          </li>
           <li><i class="fas fa-search"></i> Search</li>
           <li><i class="fas fa-grip-lines-vertical"></i> Your Library</li>
+          <br />
+          <p>Playlists</p>
           <li>
-            Playlists
-            <br> <br>
             <ul class="playlist">
-              <li id="create-playlist"><i class="fas fa-plus-square" ></i> Create Playlist</li>
-                  <li><a href="./liked_songs.html"><i class="fas fa-heart"></i> Liked Songs</a></li>
+              <li id="create-playlist">
+                <i class="fas fa-plus-square"></i> Create Playlist
+              </li>
             </ul>
           </li>
-          <hr>
-          <li>Sleepy Piano</li>
-          <li>Coding Smooth</li>
-          <li>Programming Music</li>
-          <li>Install App</li>
+          <hr />
+          <li>
+            <ul class="nav-links" id="allplaylists">
+              <li>
+                <a href="./liked_songs.html"
+                  ><i class="fas fa-heart"></i> Liked Songs</a
+                >
+              </li>
+              <li><i class="fas fa-bed"></i> Sleepy Piano</li>
+              <li><i class="fas fa-code"></i>Coding Smooth</li>
+              <li><i class="fas fa-laptop"></i> Programming Music</li>
+            </ul>
+          </li>
+          <li><i class="fas fa-download"></i> Install App</li>
         </ul>
       </nav>
     </div>
 
     <div class="content">
+
+      <div class="top_content-nav">
+					<ul>
+						<li><i class="fas fa-chevron-left"></i></li>
+						<li><i class="fas fa-chevron-right"></i></li>
+						<li>Loved My App ? <i class="fas fa-heart"></i></li>
+						<li>
+							<div class="git-btn">
+								<a href="https://github.com/Subhash703">Subhash Chandra</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+
       <section class="header">
         <div class="playlist-header">
           <img src="https://cdn.pixabay.com/photo/2019/01/05/17/05/man-3915438_960_720.jpg" alt="">
@@ -231,7 +257,7 @@
       <div class="cross">+</div>
       <h1>Make a new Plaulist</h1>
       <form action="#">
-        <input type="text" placeholder="Playlist Name">
+        <input type="text" placeholder="Playlist Name" id="playlistName">
         <input type="text" placeholder="Description">
 
         <a href="" class="btn btn-submit" id="add-playlist">Add</a>
@@ -242,16 +268,33 @@
 
   <!-- <script src="/js/app.js"></script> -->
   <script>
-    const make_playlist = document.querySelector('#create-playlist');
-    const createPlayListCard = document.querySelector('.create-playlist-card');
-    const cross = document.querySelector('.cross');
-    
-    make_playlist.addEventListener('click',()=>{
-      createPlayListCard.style.display="flex";
+    // Creating new playlist
+    const addPlaylistBtn = document.querySelector("#add-playlist");
+    const make_playlist = document.querySelector("#create-playlist");
+    const allPlaylists = document.getElementById("allplaylists");
+
+    const createPlayListCard = document.querySelector(
+      ".create-playlist-card",
+    );
+    const cross = document.querySelector(".cross");
+
+    make_playlist.addEventListener("click", () => {
+      createPlayListCard.style.display = "flex";
     });
 
-    cross.addEventListener('click',()=>{
-      createPlayListCard.style.display="none";
+    addPlaylistBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const playlistName = document.getElementById("playlistName");
+
+      console.log(playlistName.value);
+      let newPlaylist = document.createElement("li");
+      newPlaylist.innerHTML = `<i class="fas fa-music"></i> ${playlistName.value}`;
+      allPlaylists.insertBefore(newPlaylist, allPlaylists.childNodes[3]);
+      createPlayListCard.style.display = "none";
+    });
+
+    cross.addEventListener("click", () => {
+      createPlayListCard.style.display = "none";
     });
   </script>
 </body>

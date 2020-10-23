@@ -200,6 +200,7 @@ a {
 	width: 84%;
 	height: 77vh;
 	overflow: hidden;
+	pointer-events: none;
 }
 
 .circles li {
@@ -208,7 +209,7 @@ a {
 	list-style: none;
 	width: 20px;
 	height: 20px;
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.349);
 	animation: animate 15s linear infinite;
 	bottom: -150px;
 }
@@ -216,8 +217,8 @@ a {
 	left: 40%;
 	width: 60px;
 	height: 60px;
-	animation-delay: 0s;
-	animation-duration: 18s;
+	animation-delay: 5s;
+	animation-duration: 15s;
 }
 .circles li:nth-child(3) {
 	left: 45%;
@@ -230,22 +231,29 @@ a {
 	left: 60%;
 	width: 100px;
 	height: 100px;
-	animation-delay: 0s;
+	animation-delay: 8s;
 	animation-duration: 20s;
 }
 .circles li:nth-child(1) {
 	left: 30%;
 	width: 80px;
 	height: 80px;
-	animation-delay: 1s;
-	animation-duration: 15s;
+	animation-delay: 9s;
+	animation-duration: 22s;
 }
 .circles li:nth-child(5) {
 	left: 50%;
 	width: 100px;
 	height: 100px;
-	animation-delay: 1s;
-	animation-duration: 20s;
+	animation-delay: 10s;
+	animation-duration: 24s;
+}
+circles li:nth-child(8) {
+	left: 50%;
+	width: 25px;
+	height: 25px;
+	animation-delay: 15s;
+	animation-duration: 45s;
 }
 @keyframes animate {
 	0% {

@@ -31,18 +31,22 @@
 								<li id="create-playlist">
 									<i class="fas fa-plus-square"></i> Create Playlist
 								</li>
+							</ul>
+						</li>
+						<hr />
+						<li>
+							<ul class="nav-links" id="allplaylists">
 								<li>
 									<a href="./liked_songs.html"
 										><i class="fas fa-heart"></i> Liked Songs</a
 									>
 								</li>
+								<li><i class="fas fa-bed"></i> Sleepy Piano</li>
+								<li><i class="fas fa-code"></i>Coding Smooth</li>
+								<li><i class="fas fa-laptop"></i> Programming Music</li>
 							</ul>
 						</li>
-						<hr />
-						<li>Sleepy Piano</li>
-						<li>Coding Smooth</li>
-						<li>Programming Music</li>
-						<li>Install App</li>
+						<li><i class="fas fa-download"></i> Install App</li>
 					</ul>
 				</nav>
 			</div>
@@ -398,7 +402,7 @@
 				<div class="cross">+</div>
 				<h1>Make a new Playlist</h1>
 				<form action="#">
-					<input type="text" placeholder="Playlist Name" />
+					<input type="text" placeholder="Playlist Name" id="playlistName" />
 					<input type="text" placeholder="Description" />
 
 					<a href="" class="btn btn-submit" id="add-playlist">Add</a>
@@ -448,7 +452,11 @@
 			}
 		</script>
 		<script>
+			// Creating new playlist
+			const addPlaylistBtn = document.querySelector("#add-playlist");
 			const make_playlist = document.querySelector("#create-playlist");
+			const allPlaylists = document.getElementById("allplaylists");
+
 			const createPlayListCard = document.querySelector(
 				".create-playlist-card",
 			);
@@ -456,6 +464,17 @@
 
 			make_playlist.addEventListener("click", () => {
 				createPlayListCard.style.display = "flex";
+			});
+
+			addPlaylistBtn.addEventListener("click", (e) => {
+				e.preventDefault();
+				const playlistName = document.getElementById("playlistName");
+
+				console.log(playlistName.value);
+				let newPlaylist = document.createElement("li");
+				newPlaylist.innerHTML = `<i class="fas fa-music"></i> ${playlistName.value}`;
+				allPlaylists.insertBefore(newPlaylist, allPlaylists.childNodes[3]);
+				createPlayListCard.style.display = "none";
 			});
 
 			cross.addEventListener("click", () => {
