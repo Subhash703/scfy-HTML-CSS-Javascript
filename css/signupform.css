@@ -23,7 +23,10 @@ ol {
 	margin: 0;
 	padding: 0;
 }
-
+a {
+	text-decoration: none;
+	color: inherit;
+}
 p {
 	padding: 0;
 	margin: 0px 0px 5px 0px;
@@ -204,4 +207,8 @@ input[type="submit"]:focus {
 .error-message,
 .warning-message {
 	display: none;
+}
+
+.mr-5 {
+	margin-right: 0.5rem;
 }

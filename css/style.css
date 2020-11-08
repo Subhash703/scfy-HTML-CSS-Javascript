@@ -13,7 +13,6 @@ body {
 }
 
 section {
-	min-height: 100vh;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.4);
 }
 section.header {
@@ -66,6 +65,10 @@ section.header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 5em 0;
+}
+.new__releases h1 {
+	margin: 1.25rem 0;
 }
 .cards {
 	display: flex;
@@ -246,6 +249,82 @@ form {
 	align-items: center;
 }
 
+/* New Beats */
+.new__releases {
+	max-width: 100%;
+	overflow: hidden;
+}
+.music__pin-posts_scrollar {
+	border-bottom: 1px solid #2a2929;
+}
+.music__pin-posts_scrollar .music__post-links {
+	display: flex;
+	justify-content: stretch;
+	border-bottom: 1px solid #2a2929;
+}
+.music__pin-posts_scrollar .music__post-links li {
+	padding: 1rem 0.5rem;
+	flex: 1;
+	text-align: center;
+	margin: 0 1px;
+	transition: all 0.3s ease-in;
+}
+.music__post-links li:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #fff;
+}
+.music__post-links li::first-of-type,
+.music__post-links li::last-of-type {
+	margin: 0;
+}
+.music__pin-posts_scrollar {
+	max-width: 1240px;
+	margin: 0 auto;
+	height: 200px;
+	display: flex;
+	overflow-x: scroll;
+	position: relative;
+}
+
+.music__pin-posts_scrollar .pin_post {
+	display: inline-block;
+	min-width: 200px;
+	margin: 5px;
+	color: #fff;
+	border-right: 1px solid #000;
+	display: flex;
+	justify-content: start;
+	align-items: flex-end;
+	position: relative;
+	transition: transform 0.3s ease-in-out;
+}
+.pin_post:hover {
+	transform: scale3d(1.1, 1.1, 2.1);
+}
+
+.pin_post a,
+.pin_post img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.music__pin-posts_scrollar .pin_post .music_text-content {
+	background: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px;
+	text-transform: capitalize;
+}
+.music_text-content small {
+	font-size: 10px;
+}
+
+.music__pin-posts_scrollar::-webkit-scrollbar {
+	display: none;
+}
 /* Footer */
 footer {
 	min-height: 60px;

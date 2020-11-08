@@ -140,9 +140,9 @@ nav hr {
 	border: 1px solid #fff;
 	padding: 1rem;
 	border-radius: 50%;
-	background: #181818;
+	background: #087f2b;
 	opacity: 0;
-	transition: all 0.4s ease-in-out;
+	transition: all 0.4s cubic-bezier(0.28, -0.85, 0.69, 0.87);
 	cursor: pointer;
 }
 .sc__song-wrapper:hover {
@@ -220,7 +220,8 @@ h1 span {
 	background: rgba(0, 0, 0, 0.8);
 }
 .make_playlist {
-	width: 340px;
+	max-width: 520px;
+	width: 100%;
 	border-radius: 10px;
 	background: #fff;
 	padding: 1rem;
@@ -235,8 +236,9 @@ form {
 	width: 100%;
 	padding: 0.4rem 1rem;
 	margin: 0.6rem 0;
+	border-radius: 4px;
 	outline: none;
-	border: 2px solid rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba(0, 0, 0, 0.5);
 }
 .cross {
 	position: absolute;
@@ -248,8 +250,9 @@ form {
 }
 
 .btn {
-	border: 1px solid #111318;
+	/* border: 1px solid #111318; */
 	padding: 0.4rem 1.5rem;
+	border-radius: 7px;
 	text-align: center;
 }
 .btn-submit {
@@ -301,7 +304,7 @@ form {
 	background-color: #fff;
 }
 
-.git-btn {
+.logout-btn {
 	padding: 5px 12px;
 	background: #7fdb96;
 	color: #fff;

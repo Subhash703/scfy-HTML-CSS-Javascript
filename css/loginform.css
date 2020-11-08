@@ -38,6 +38,7 @@ body {
 @media screen and (max-width: 920px) {
 	.container-outer {
 		flex-direction: column-reverse;
+		padding: 2em;
 	}
 
 	.form-wrapper {

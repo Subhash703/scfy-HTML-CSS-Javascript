@@ -59,15 +59,10 @@
 			<div class="content">
 				<!-- Shortcuts -->
 				<div class="top_content-nav">
-					<ul>
+					<ul class="control-links">
 						<li><i class="fas fa-chevron-left"></i></li>
 						<li><i class="fas fa-chevron-right"></i></li>
 						<li>Loved My App ? <i class="fas fa-heart"></i></li>
-						<li>
-							<div class="git-btn">
-								<a href="https://github.com/Subhash703">Subhash Chandra</a>
-							</div>
-						</li>
 					</ul>
 				</div>
 				<div class="sc_music-heading" style="margin-left: 1rem">
@@ -489,11 +484,12 @@
 			addPlaylistBtn.addEventListener("click", (e) => {
 				e.preventDefault();
 				const playlistName = document.getElementById("playlistName");
-
-				console.log(playlistName.value);
-				let newPlaylist = document.createElement("li");
-				newPlaylist.innerHTML = `<i class="fas fa-music"></i> ${playlistName.value}`;
-				allPlaylists.insertBefore(newPlaylist, allPlaylists.childNodes[3]);
+				if (playlistName.value !== "") {
+					console.log(playlistName.value);
+					let newPlaylist = document.createElement("li");
+					newPlaylist.innerHTML = `<i class="fas fa-music"></i> ${playlistName.value}`;
+					allPlaylists.insertBefore(newPlaylist, allPlaylists.childNodes[3]);
+				}
 				createPlayListCard.style.display = "none";
 			});
 
@@ -517,5 +513,7 @@
 
 			const songPlayerBtn = document.querySelector(".pause");
 		</script>
+
+		<script src="./js/app.js"></script>
 	</body>
 </html>

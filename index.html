@@ -2,7 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link
+			rel="shortcut icon"
+			href="./sources/favicon.ico"
+			type="image/x-icon"
+		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Welcome : ScFy - Your Favorite Music App</title>
 		<link rel="stylesheet" href="./css/landing.css" />
@@ -14,11 +18,16 @@
 	<body>
 		<div class="container-wrapper">
 			<div class="navbar">
-				<ul>
+				<ul class="nav-links">
 					<li class="humburger">
 						<i class="fas fa-bars"></i>
 					</li>
 					<li><a href="https://scdev.netlify.app/">About Me</a></li>
+					<li>
+						<a href="./login.html" rel="noopener noreferrer" id="login_user"
+							>Login</a
+						>
+					</li>
 					<li class="btn"><a href="">Get started</a></li>
 				</ul>
 			</div>
@@ -33,7 +42,9 @@
 						>
 					</li>
 					<li>
-						<a href="https://scdev.netlify.app/"><i class="fas fa-address-card"></i> About Me</a>
+						<a href="https://scdev.netlify.app/"
+							><i class="fas fa-address-card"></i> About Me</a
+						>
 					</li>
 					<li>
 						<a href="https://github.com/Subhash703"
@@ -41,14 +52,10 @@
 						>
 					</li>
 					<li>
-						<a href="https://www.instagram.com"
-							><i class="fab fa-instagram-square"></i> Instagram</a
-						>
+						<a href="./login.html"><i class="fas fa-user"></i> Sign In</a>
 					</li>
 					<li>
-						<a href="https://www.twitter.com"
-							><i class="fab fa-twitter-square"></i> Twitter</a
-						>
+						<a href="./signup.html"><i class="fas fa-user"></i> Sign Up</a>
 					</li>
 				</ul>
 			</div>
@@ -92,10 +99,9 @@
 			});
 
 			const bgAudio = document.getElementById("bg-audio");
-			bgAudio.volume = 0.3;
+			bgAudio.volume = 0.6;
 
-			let text =
-				"🎵 Your lights in your heart, It shines on my day. My eyes on the soul... Your heart comes to me... Lines our ways...  Hold my hand 🎵";
+			let text = `🎵 Your lights in your heart, It shines on my day. My eyes on the soul... Your heart comes to me... Lines our ways...  Hold my hand..... Sunrises in your eyes Shines on your face We rise from your low`;
 
 			const pdesc = document.querySelector(".playlist-desc");
 			let tLen = text.length;
@@ -110,6 +116,32 @@
 				}
 				x++;
 			}, 350);
+
+			let mystorage = window.localStorage;
+			let isLoggedIn = mystorage.Username === "" ? false : true;
+			if (isLoggedIn) {
+				let login_link = document.getElementById("login_user");
+				login_link.setAttribute("href", "./index.html");
+				login_link.innerText = "Welcome " + mystorage.Username.split("@")[0];
+
+				var li = document.createElement("li");
+				li.innerHTML = `<a href="./index.html">Logout</a>`;
+				li.classList.add("logout");
+				document.querySelector(".nav-links").appendChild(li);
+			}
+			if (isLoggedIn) {
+				console.log("clicked");
+				const logoutBtn = document.querySelector(".logout");
+				logoutBtn.addEventListener("click", (e) => {
+					e.preventDefault();
+					mystorage.Username = "";
+					mystorage.Password = "";
+					// window.location.href = "./index.html";
+					logoutBtn.style.display = "none";
+					let login_link = document.getElementById("login_user");
+					login_link.innerText = "Login";
+				});
+			}
 		</script>
 	</body>
 </html>

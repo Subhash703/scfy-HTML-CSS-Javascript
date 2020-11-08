@@ -2,6 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<link
+			rel="shortcut icon"
+			href="./sources/favicon.ico"
+			type="image/x-icon"
+		/>
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
@@ -36,7 +41,7 @@
 							</div>
 							<div class="field-item">
 								<label for="password">Password</label>
-								<input type="password" id="email" data-validate="required" />
+								<input type="password" id="password" data-validate="required" />
 							</div>
 							<div class="field-item">
 								<label for="confirmpassword">Confirm Password</label>
@@ -47,7 +52,8 @@
 								/>
 							</div>
 						</fieldset>
-						<button>Sign Up</button>
+						<button id="submitBtn">Sign Up</button>
+						<button class="mr-5"><a href="./login.html">Login</a></button>
 					</form>
 				</div>
 			</div>
@@ -57,31 +63,61 @@
 			src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
 			type="text/javascript"
 		></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
-			integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
-			crossorigin="anonymous"
-		></script>
+		<script>
+			const submitBtn = document.querySelector("#submitBtn");
+			const email = document.querySelector("#useremail");
+			const password = document.querySelector("#password");
+			const confirmpassword = document.querySelector("#confirmpassword");
+			let errors = 0;
 
-		<script type="text/javascript">
-			$("#myform").validate({
-				invalidHandler: function (event, validator) {
-					// 'this' refers to the form
-					var errors = validator.numberOfInvalids();
-					if (errors) {
-						var message =
-							errors == 1
-								? "You missed 1 field. It has been highlighted"
-								: "You missed " +
-								  errors +
-								  " fields. They have been highlighted";
-						$("div.error span").html(message);
-						$("div.error").show();
-					} else {
-						$("div.error").hide();
-					}
-				},
+			let myStorage = window.localStorage;
+
+			submitBtn.addEventListener("click", (e) => {
+				e.preventDefault();
+				handleForm();
+				if (!errors) {
+					window.location.href = "./index.html";
+					myStorage.setItem("Username", emialValue);
+
+					const hash = password.value
+						.split("")
+						.reduce(
+							(prevHash, currVal) =>
+								((prevHash << 5) - prevHash + currVal.charCodeAt(0)) | 0,
+							0,
+						);
+					myStorage.setItem("Password", hash);
+				}
 			});
+
+			function handleForm() {
+				if (!isvalidPassword()) {
+					errors = 1;
+					alert("Password Is Not valid");
+					return;
+				}
+
+				if (password.value !== confirmpassword.value) {
+					errors = 1;
+					alert("Password Doesn't match");
+					return;
+				}
+			}
+
+			function isvalidPassword() {
+				let passval = password.value;
+				if (
+					passval.indexOf("i") == -1 &&
+					passval.indexOf("@") == -1 &&
+					passval.indexOf("&") == -1 &&
+					passval.indexOf("#") == -1 &&
+					passval.indexOf("*") == -1
+				) {
+					return false;
+				} else {
+					return true;
+				}
+			}
 		</script>
 	</body>
 </html>
