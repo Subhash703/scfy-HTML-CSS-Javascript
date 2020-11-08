@@ -17,3 +17,11 @@ Liked Songs Playlists
 When you click on "Create Playlist" : For creating new Playlist
 
 ![Image 4](https://github.com/Subhash703/scfy-HTML-CSS-Javascript/blob/master/sources/img4.png)
+
+Login Page :
+
+![Image 5](https://github.com/Subhash703/scfy-HTML-CSS-Javascript/blob/master/sources/img6.png)
+
+Sign Up 
+
+![Image 6](https://github.com/Subhash703/scfy-HTML-CSS-Javascript/blob/master/sources/img5.png)
